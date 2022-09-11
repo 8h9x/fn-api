@@ -37,11 +37,17 @@ export interface AccessResponse {
 };
 
 export interface EventHandlers {
-    ready: (client: Client) => unknown;
     tokenRefresh: (refreshData: unknown) => unknown;
 };
 
+export * as consts from "./consts.js";
 export { httpRequest } from "./httpRequest.js";
+
+export { authenticate } from "./auth/authenticate.js";
+
+export { fetchFavoritePlaylists } from "./methods/fetchFavoritePlaylists.js";
+export { fetchPlaylistMeta } from "./methods/fetchPlaylistMeta.js";
+
 export { profileOperationRequest, ProfileOperation, ProfileId } from "./operations/profileOperationRequest.js";
 export { copyCosmeticLoadout } from "./operations/copyCosmeticLoadout.js";
 export { queryProfile } from "./operations/queryProfile.js";
