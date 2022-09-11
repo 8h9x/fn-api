@@ -1,7 +1,8 @@
+import { Client } from "../index.js";
 import { profileOperationRequest } from "./profileOperationRequest.js";
 
-export async function setCosmeticLockerSlot(accountId: bigint, profileId: "athena" | "campaign", payload: SetCosmeticLockerSlotPayload) {
-    return await profileOperationRequest(accountId, "SetCosmeticLockerSlot", profileId, payload);
+export async function setCosmeticLockerSlot(client: Client, profileId: "athena" | "campaign", payload: SetCosmeticLockerSlotPayload) {
+    return await profileOperationRequest(client, "SetCosmeticLockerSlot", profileId, payload);
 };
 
 interface SetCosmeticLockerSlotPayload {
