@@ -1,4 +1,4 @@
-import { httpRequest } from "../httpRequest";
+import { httpRequest } from "../httpRequest.js";
 
 export async function profileOperationRequest(accountId: bigint, profileOperation: ProfileOperation, profileId: ProfileId, payload?: object) {
     const { body, statusCode } = await httpRequest(`https://fortnite-public-service-prod11.ol.epicgames.com/fortnite/api/game/v2/profile/${accountId}/client/${profileOperation}?profileId=${profileId}&rvn=-1`, {

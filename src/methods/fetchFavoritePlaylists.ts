@@ -1,3 +1,3 @@
-export async function fetchFavoritePlaylists(client, accountId: bigint) {
-    
+export async function fetchFavoritePlaylists(accountId: bigint) {
+
 };

@@ -1,5 +1,5 @@
-import { AUTH_CLIENTS } from "./consts";
-import { authenticate } from "./auth/authenticate";
+import { AUTH_CLIENTS } from "./consts.js";
+import { authenticate } from "./auth/authenticate.js";
 
 export async function createClient(options: CreateClientOpts): Promise<Client> {
     // const basicToken = Buffer.from(`${AUTH_CLIENTS.IOS.ID}:${AUTH_CLIENTS.IOS.SECRET}`).toString("base64");
@@ -36,10 +36,10 @@ export interface EventHandlers {
     tokenRefresh: (refreshData: unknown) => unknown;
 };
 
-export { httpRequest } from "./httpRequest";
-export { profileOperationRequest, ProfileOperation, ProfileId } from "./operations/profileOperationRequest";
-export { copyCosmeticLoadout } from "./operations/copyCosmeticLoadout";
-export { queryProfile } from "./operations/queryProfile";
-export { queryPublicProfile } from "./operations/queryPublicProfile";
-export { setCosmeticLockerSlot } from "./operations/setCosmeticLockerSlot";
-export { setHomebaseName } from "./operations/setHomebaseName";
+export { httpRequest } from "./httpRequest.js";
+export { profileOperationRequest, ProfileOperation, ProfileId } from "./operations/profileOperationRequest.js";
+export { copyCosmeticLoadout } from "./operations/copyCosmeticLoadout.js";
+export { queryProfile } from "./operations/queryProfile.js";
+export { queryPublicProfile } from "./operations/queryPublicProfile.js";
+export { setCosmeticLockerSlot } from "./operations/setCosmeticLockerSlot.js";
+export { setHomebaseName } from "./operations/setHomebaseName.js";

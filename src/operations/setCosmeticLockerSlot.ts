@@ -1,4 +1,4 @@
-import { profileOperationRequest } from "./profileOperationRequest";
+import { profileOperationRequest } from "./profileOperationRequest.js";
 
 export async function setCosmeticLockerSlot(accountId: bigint, profileId: "athena" | "campaign", payload: SetCosmeticLockerSlotPayload) {
     return await profileOperationRequest(accountId, "SetCosmeticLockerSlot", profileId, payload);

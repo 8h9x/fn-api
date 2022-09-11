@@ -1,17 +1,29 @@
 {
     "compilerOptions": {
-        "declaration": true,
+        "strict": true,
         "strictNullChecks": true,
-        "target": "ESNext",
-        "outDir": "dist",
-        "module": "ESNext",
-        "moduleResolution": "node",
-        "sourceMap": true,
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
+        "target": "es2020",
         "lib": [
-            "ESNext",
-            "dom"
+            "esnext",
+            "esnext.array",
+            "esnext.asynciterable",
+            "esnext.intl",
+            "esnext.symbol"
         ],
-        "rootDir": "src"
+        "declaration": true,
+        "sourceMap": true,
+        "removeComments": false,
+        "alwaysStrict": true,
+        "pretty": true,
+        "outDir": "dist",
+        "incremental": true,
+        "noEmitHelpers": true,
+        "importHelpers": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true
     },
     "include": [
         "src"
