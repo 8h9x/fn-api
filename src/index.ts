@@ -1,11 +1,12 @@
-import { httpRequest } from "./httpRequest";
+import { AUTH_CLIENTS } from "./consts";
+import { authenticate } from "./auth/authenticate";
 
-export function createClient(options: CreateClientOpts): Client {
-    return {} as Client;
-};
+export async function createClient(options: CreateClientOpts): Promise<Client> {
+    // const basicToken = Buffer.from(`${AUTH_CLIENTS.IOS.ID}:${AUTH_CLIENTS.IOS.SECRET}`).toString("base64");
 
-export async function login(client: Client) {
-
+    return {
+        auths: new Map()
+    } as Client;
 };
 
 export interface CreateClientOpts {
@@ -22,7 +23,7 @@ export interface CreateClientOpts {
 export interface DeviceAuth {
     deviceId: bigint;
     accountId: bigint;
-    secret: bigint;
+    secret: string;
 };
 
 export interface Client {
