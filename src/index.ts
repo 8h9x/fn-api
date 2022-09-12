@@ -49,6 +49,7 @@ export { fetchFavoritePlaylists } from "./methods/fetchFavoritePlaylists.js";
 export { fetchPlaylistMeta } from "./methods/fetchPlaylistMeta.js";
 
 export { profileOperationRequest, ProfileOperation, ProfileId } from "./operations/profileOperationRequest.js";
+export { claimLoginReward } from "./operations/claimLoginReward.js";
 export { copyCosmeticLoadout } from "./operations/copyCosmeticLoadout.js";
 export { queryProfile } from "./operations/queryProfile.js";
 export { queryPublicProfile } from "./operations/queryPublicProfile.js";
