@@ -6,7 +6,7 @@ export async function httpRequest(client: Client, url: string, options?: HttpReq
         method: options?.method ?? "GET",
         headers: {
             "User-Agent": "FortniteGame/++Fortnite+Release-21.50-CL-21657658 Windows/10.0.22000.1.768.64bit",
-            ...options?.authed ? { "Authorization": `bearer ${client.auths.get("IOS")?.access_token}` } : {},
+            ...options?.authed ?? true ? { "Authorization": `bearer ${client.auths.get("IOS")?.access_token}` } : {},
             ...options?.headers
         },
         body: options?.body ?? null
@@ -15,7 +15,7 @@ export async function httpRequest(client: Client, url: string, options?: HttpReq
 };
 
 interface HttpRequestOpts {
-    authed: boolean;
+    authed?: boolean;
     method?: HttpMethod;
     headers?: Record<string, string>;
     body?: string;

@@ -11,7 +11,7 @@ export async function authenticate(options: CreateClientOpts) {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": `Basic ${basicToken}`
         },
-        body: `grant_type=authorization_code&code=${options.auth.value.toString(16)}`,
+        body: `grant_type=authorization_code&code=${options.auth.value}`,
         authed: false
     });
 

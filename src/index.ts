@@ -16,19 +16,19 @@ export interface CreateClientOpts {
         value: DeviceAuth
     } | {
         type: "authorizationCode" | "exchangeCode" | "refreshToken";
-        value: bigint;
+        value: string;
     };
-    handlers?: Partial<EventHandlers>;
+    events?: Partial<EventHandlers>;
 };
 
 export interface DeviceAuth {
-    deviceId: bigint;
-    accountId: bigint;
+    deviceId: string;
+    accountId: string;
     secret: string;
 };
 
 export interface Client {
-    accountId: bigint;
+    accountId: string;
     auths: Map<string, AccessResponse>;
 };
 
@@ -44,11 +44,12 @@ export * as consts from "./consts.js";
 export { httpRequest } from "./httpRequest.js";
 
 export { authenticate } from "./auth/authenticate.js";
+export { createDeviceAuth } from "./auth/createDeviceAuth.js";
 
 export { fetchFavoritePlaylists } from "./methods/fetchFavoritePlaylists.js";
 export { fetchPlaylistMeta } from "./methods/fetchPlaylistMeta.js";
 
-export { profileOperationRequest, ProfileOperation, ProfileId } from "./operations/profileOperationRequest.js";
+export { profileOperationRequest, ProfileId } from "./operations/profileOperationRequest.js";
 export { claimLoginReward } from "./operations/claimLoginReward.js";
 export { copyCosmeticLoadout } from "./operations/copyCosmeticLoadout.js";
 export { queryProfile } from "./operations/queryProfile.js";
