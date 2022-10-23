@@ -13,4 +13,4 @@ export async function profileOperationRequest(client: Client, profileOperation: 
     return { body, statusCode };
 };
 
-export type ProfileId = "athena" | "campaign" | "collection_book_people0" | "collection_book_schematics0" | "collections" | "common_core" | "common_public" | "creative" | "metadata" | "outpost0" | "theater0";
+export type ProfileId = "athena" | "campaign" | "collection_book_people0" | "collection_book_schematics0" | "collections" | "common_core" | "common_public" | "creative" | "metadata" | "outpost0" | "recycle_bin" | "theater0" | "theater1" | "theater2";

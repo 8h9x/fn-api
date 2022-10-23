@@ -5,7 +5,7 @@ export async function httpRequest(client: Client, url: string, options?: HttpReq
     const { body, statusCode } = await request(url, {
         method: options?.method ?? "GET",
         headers: {
-            "User-Agent": "FortniteGame/++Fortnite+Release-21.50-CL-21657658 Windows/10.0.22000.1.768.64bit",
+            "User-Agent": "FortniteGame/++Fortnite+Release-22.20-CL-22615185 Windows/10.0.22000.1.768.64bit",
             ...options?.authed ?? true ? { "Authorization": `bearer ${client.auths.get("IOS")?.access_token}` } : {},
             ...options?.headers
         },

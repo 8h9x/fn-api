@@ -45,6 +45,7 @@ export { httpRequest } from "./httpRequest.js";
 
 export { authenticate } from "./auth/authenticate.js";
 export { createDeviceAuth } from "./auth/createDeviceAuth.js";
+export { generateClientCredentials } from "./auth/generateClientCredentials.js";
 
 export { fetchFavoritePlaylists } from "./methods/fetchFavoritePlaylists.js";
 export { fetchPlaylistMeta } from "./methods/fetchPlaylistMeta.js";
